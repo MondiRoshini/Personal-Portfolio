@@ -1,0 +1,289 @@
+/* navbar properties */
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0,0,33);
+  /* rgb(0, 0, 33) or white */
+  font-family: 'Poppins', cursive;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  /* background-color: white; */
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  font-size: 25px;
+}
+.navbar ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar ul li{
+  margin: 20px;
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+  /* transition: ease; */
+}
+.navbar a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.2s ease;
+}
+.navbar a:hover::after{
+  width: 100%;
+}
+.navbar h1{
+  margin-left: 1%;
+  font-family: 'Lumanosimo', cursive;
+  margin-right: auto;
+}
+.btn{
+  margin-right: 1%;
+  margin-left: auto;
+  height: 60px;
+  width: 145px;
+  font-size: 17px;
+  background-color: rgb(0,0,33);
+  border-radius: 25px;
+  border: black;
+  outline: none;
+  box-shadow: -5px -5px 10px rgb(104, 104, 147), 8px 8px 10px rgba(0, 0, 0, 0.853), inset -1px -1px 10px rgb(104, 104, 147), inset 4px 4px 10px rgba(0, 0, 0, 0.437);
+  transition-duration: 1s;
+}
+.btn a:hover::after{
+  content: none;
+}
+.btn a:hover{
+  font-size: 18px;
+  text-decoration: none;
+  transition: ease-in-out;
+}
+
+/* main */
+main{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* right side part of the webpage */
+main .right{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  margin-left: 10%;
+  width: 50%;
+}
+main .right div{
+  max-width: 80%;
+}
+.right{
+  font-size: 30px;
+}
+.first{
+  font-family: 'Dancing script', cursive;
+}
+.name{
+  font-family: 'Lumanosimo', cursive;
+}
+
+/* left image properties */
+main .left{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+}
+main img {
+  filter: brightness(50%) contrast(80%);
+  max-width: 100%;
+  height: 100%;
+}
+
+/* sidebar properties in mobile */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 200px;
+  line-height: 40px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: none;
+  position: fixed;
+  backdrop-filter: blur(10px);
+}  
+.sidebar li{
+  width: 100%;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.sidebar a{
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.3s;
+}
+.sidebar a:active{
+  font-size: 18px;
+}
+
+/* for mobiles or smaller screens */
+@media (max-width: 600px){
+  .hideOnMobile{
+    display: none;
+  }
+  main{
+    flex-wrap: wrap;
+  }
+  main .left{
+    width: 100%;
+  }
+  main .right{
+    width: 80%;
+    margin-bottom: 50px;
+  }
+}
+
+/* for larger screens */
+@media (min-width: 600px) {
+  .showOnMobile{
+    display: none;
+  }
+}
+
+/* about me page */
+#about{
+  padding: 5%;
+  color: white;
+  width: 80%;
+  margin: 5%;
+  margin-top: 20%;
+  text-align: center;
+  border: 5px white solid;
+  border-radius: 20px;
+}
+#about h1{
+  font-family: "Poetsen One", sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+.about_text{
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 5%;
+}
+
+/* skills page */
+#skills{
+  padding: 5%;
+  color: white;
+  width: 80%;
+  margin: 5%;
+  margin-top: 20%;
+  text-align: center;
+  border: 5px white solid;
+  border-radius: 20px;
+}
+#skills h1{
+  font-family: "Poetsen One", sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+.skills_info{
+  margin: 5%;
+  text-align: left;
+}
+.bar{
+  border: 2px white solid;
+  border-radius: 10px;
+  margin: 3%;
+  padding: 5%;
+  width: 70%;
+}
+#skills .skills_info .bar .progress-bar{
+  width: 100%;
+  height: 15px;
+  background-color: #dddddd8a;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 1%;
+}
+#skills .skills_info .bar .progress-bar span{
+  position: absolute;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(to right, #00FFFF, #1E90FF);
+}
+#skills .skills_info .bar .progress-bar span.html{
+  width: 90%;
+}
+#skills .skills_info .bar .progress-bar span.css{
+  width: 70%;
+}
+#skills .skills_info .bar .progress-bar span.js{
+  width: 50%;
+}
+
+#skills .skills_info .bar .progress-bar span.communication{
+  width: 75%;
+}
+#skills .skills_info .bar .progress-bar span.team-work{
+  width: 90%;
+}
+#skills .skills_info .bar .progress-bar span.leadership{
+  width: 70%;
+}
+#skills .skills_info .bar .progress-bar span.flexibility{
+  width: 80%;
+}
+
+/* contact me */
+#contact{
+  padding: 5%;
+  color: white;
+  width: 80%;
+  margin: 5%;
+  margin-top: 20%;
+  text-align: center;
+  border: 5px white solid;
+  border-radius: 20px;
+}
+#contact h1{
+  font-family: "Poetsen One", sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+#contact p{
+  margin: 5%;
+  line-height: 1.5;
+}
+.icons{
+  font-size: 1.8rem;
+  word-spacing: 8px;
+}
+.icons a{
+  color: white;
+}
