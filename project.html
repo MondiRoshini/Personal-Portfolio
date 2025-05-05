@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b2b;
+      color: #ffffff;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .project-container {
+      max-width: 900px;
+      margin: auto;
+      background: #1f2937;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .project-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      font-size: 2em;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .role, .tech-stack, .team {
+      font-size: 0.95em;
+      margin-bottom: 10px;
+      color: #cbd5e1;
+    }
+
+    .description {
+      margin-bottom: 20px;
+      color: #e2e8f0;
+    }
+
+    .links a {
+      color: #f472b6;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .project-container {
+        padding: 20px;
+      }
+
+      .project-title {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Projects</h1>
+
+  <div class="project-container">
+    <div class="project-title">Our Café Web</div>
+    
+    <div class="role"><strong>Role:</strong> Frontend Developer</div>
+    <div class="description">
+      A beautifully designed website for a café, created as a group project in college. It includes a homepage, menu, reservation section, and order form — giving a full user-friendly experience.
+    </div>
+    <div class="project-gallery">
+      <img src="images/cafe-home.png" alt="Cafe Homepage">
+      <img src="images/cafe-menu.png" alt="Menu Page">
+      <img src="images/about us.png" alt="AboutUs Page">
+    </div><br><br>
+    
+    <div class="tech-stack"><strong>Tech Stack:</strong> HTML, CSS, JavaScript</div>
+    <div class="team"><strong>Team:</strong> Collaborative project with 3 college friends</div>
+    <div class="links">
+      Live Demo <a href="https://mondiroshini.github.io/our_cafe_web/" target="_blank">https://mondiroshini.github.io/our_cafe_web/</a><br>
+      GitHub Repo <a href="https://github.com/mondiroshini/our_cafe_web" target="_blank">https://github.com/mondiroshini/our_cafe_web</a>
+    </div>
+  </div>
+
+</body>
+</html>
